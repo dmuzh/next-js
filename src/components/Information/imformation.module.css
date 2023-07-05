@@ -1,0 +1,86 @@
+.Frame{
+    margin-top: 45px;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+.form {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+}
+
+.form .formTxt {
+    flex-basis: 48%;
+}
+
+.form .formTxt h4 {
+    font-weight: 600;
+    color: #ff3c78;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.form .formTxt h1 {
+    font-weight: 600;
+    color: black;
+    font-size: 40px;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    color:rgba(0, 0, 0, 0.89);
+}
+
+.form .formTxt span {
+    color:rgba(0, 0, 0, 0.89);
+    font-size: 14px;
+}
+
+.form .formTxt h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 15px 0;
+    color:rgba(0, 0, 0, 0.89);
+}
+
+.form .formTxt p {
+    color:rgba(0, 0, 0, 0.89);
+    font-size: 14px;
+}
+
+.form .formDetails {
+    flex-basis: 48%;
+}
+
+.form .formDetails input[type="text"],
+.form .formDetails input[type="email"] {
+    padding: 15px 20px;
+    color: #aaa;
+    outline: none;
+    border: 1px solid #aaa;
+    margin: 35px 15px;
+    font-size: 14px;
+}
+
+.form .formDetails textarea {
+    padding: 15px 20px;
+    margin: 0 15px;
+    color: #aaa;
+    outline: none;
+    border: 1px solid #aaa;
+    font-size: 14px;
+    resize: none;
+}
+
+.form .formDetails button {
+    padding: 15px 25px;
+    color: white;
+    font-weight: 500;
+    background: black;
+    outline: none;
+    border: none;
+    margin: 15px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
