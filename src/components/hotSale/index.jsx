@@ -35,20 +35,20 @@ function Hotsale({ productsSale }) {
             >
                 {
                     <div >
-                        {productsSale.map((p) => (
-                            <SwiperSlide key={p._id} className={style.wrapperB}>
-                                <Link className={style.wrapperA} style={{ height: '20px' }} href={`/product/${p._id}`}>
+                        {productsSale.map((sale) => (
+                            <SwiperSlide key={sale._id} className={style.wrapperB}>
+                                <Link className={style.wrapperA} style={{ height: '20px' }} href={`/product/${sale._id}`}>
 
 
                                     <div className={style.allProducts}>
                                         <div className={style.product}>
                                             <div className={style.saleOff}>
-                                                <span className={style.saleOffPercent}>-{p.discount}%</span>
+                                                <span className={style.saleOffPercent}>-{sale.discount}%</span>
                                             </div>
-                                            <img src={p.img} />
+                                            <img src={sale.img} />
                                             <div className="product-info">
-                                                <h4 className={style.productTitle}>{p.name}</h4>
-                                                <p className={style.productPrice}>${p.price}</p>
+                                                <h4 className={style.productTitle}>{sale.name}</h4>
+                                                <p className={style.productPrice}>${sale.price}</p>
                                                 <span>
                                                     <Rate tooltips={desc} onChange={setValue} value={value} />
                                                     {value ? <span className="ant-rate-text">{desc[value - 1]}</span> : ''}

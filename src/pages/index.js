@@ -63,7 +63,6 @@ export async function getServerSideProps() {
 
       },
 
-      // revalidate: 24 * 60 * 60,
     };
   } catch (error) {
     return {
@@ -71,4 +70,3 @@ export async function getServerSideProps() {
     };
   }
 }
-// ${inter.className}`

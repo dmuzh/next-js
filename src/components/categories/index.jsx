@@ -9,11 +9,11 @@ const Categories = ({ categories }) => {
             {
                 categories.length > 0 ? (
                     <div className={style.collections}>
-                        {categories.map((p) => <Link key={p.categoryId} href={`/`}>
+                        {categories.map((cat) => <Link key={cat.categoryId} href={`/`}>
                             <section id="collection">
                                 <div>
                                     <div className={style.content}>
-                                        <img src={p.img} alt="img" />
+                                        <img src={cat.img} alt="img" />
                                         <div className={style.imgContent}>
                                             <p>Clothing Collections</p>
                                             <button>

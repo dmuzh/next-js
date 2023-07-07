@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from "next/image";
 import axiosClient from '@/libraries/axiosClient';
 import style from './product.module.css'
 import { Rate } from 'antd';
@@ -7,7 +8,7 @@ import { Rate } from 'antd';
 
 const desc = [];
 
-function productSP({ productSP }) {
+function ProductSP({ productSP }) {
 
   // const productsData = getProducts()
 
@@ -21,14 +22,16 @@ function productSP({ productSP }) {
       {
         productSP.length > 0 ? (
           <div className={style.wrapper}>
-            {productSP.map((p) => <Link className={style.wrapperA} style={{ flexDirection: 'none' }} key={p._id} href={`/product/${p._id}`}>
+            {productSP.map((por) => <Link className={style.wrapperA} style={{ flexDirection: 'none' }} key={por._id} href={`/product/${por._id}`}>
 
               <div className={style.product}>
                
-                <img src={p.img} />
+                <Image  src={por.img} 
+                 width={200}
+                 height={300} ></Image>
                 <div className="product-info">
-                  <h4 className={style.productTitle}>{p.name}</h4>
-                  <p className={style.productPrice}>${p.price}</p>
+                  <h4 className={style.productTitle}>{por.name}</h4>
+                  <p className={style.productPrice}>${por.price}</p>
 
                 </div>
                 <span>
@@ -60,7 +63,7 @@ function productSP({ productSP }) {
   );
 }
 
-export default productSP;
+export default ProductSP;
 
 // getServerSideProps - Server-Side Rendering
 export async function getServerSideProps() {

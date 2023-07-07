@@ -37,7 +37,7 @@ function Products({ products }) {
       {
         productsShow.length > 0 ? (
           <div className={style.wrapper}>
-            {productsShow.map((p) => <Link className={style.wrapperA} key={p._id} href={`/product/${p._id}`}>
+            {productsShow.map((pro) => <Link className={style.wrapperA} key={pro._id} href={`/product/${pro._id}`}>
 
 
               <div className={style.allProducts}>
@@ -45,10 +45,10 @@ function Products({ products }) {
                   {/* <div className={style.saleOff}>
                     <span className={style.saleOffPercent}>-{p.discount}%</span>
                   </div> */}
-                  <img src={p.img} />
+                  <img src={pro.img} />
                   <div className="product-info">
-                    <h4 className={style.productTitle}>{p.name}</h4>
-                    <p className={style.productPrice}>${p.price}</p>
+                    <h4 className={style.productTitle}>{pro.name}</h4>
+                    <p className={style.productPrice}>${pro.price}</p>
                     <span>
                       <Rate tooltips={desc} onChange={setValue} value={value} />
                       {value ? <span className="ant-rate-text">{desc[value - 1]}</span> : ''}

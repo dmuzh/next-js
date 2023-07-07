@@ -282,23 +282,7 @@ ProductDetail.defaultProps = {
 
 export default ProductDetail;
 
-// SSG
-// export async function getStaticPaths() {
-//   try {
-//     const response = await axiosClient.get('/products');
-
-//     const paths = response.data.payload.map((p) => {
-//       return {
-//         params: { id: p._id},
-//       }
-//     })
-
-//     return {
-//       paths,
-//       fallback: block,
-//     }
-//   } catch (error) {
-//     console.log('««««« error »»»»»', error);
+// 
 //   }
 // }
 

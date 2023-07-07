@@ -30,16 +30,16 @@ function Hotsale({ productsSaleFull }) {
 
             {productsToShow.length > 0 ? (
                 <div className={style.wrapper}>
-                    {productsToShow.map((p) => (
-                        <Link key={p._id} href={`/product/${p._id}`} passHref>
+                    {productsToShow.map((show) => (
+                        <Link key={show._id} href={`/product/${show._id}`} passHref>
                             <div className={style.wrapperA}>
                                 <div className={style.products}>
                                     <div className={style.allProducts}>
                                         <div className={style.product}>
-                                            <img src={p.img} alt={p.name} />
+                                            <img src={show.img} alt={show.name} />
                                             <div className="product-info">
-                                                <h4 className={style.productTitle}>{p.name}</h4>
-                                                <p className={style.productPrice}>${p.price}</p>
+                                                <h4 className={style.productTitle}>{show.name}</h4>
+                                                <p className={style.productPrice}>${show.price}</p>
                                                 <span>
                                                     <Rate tooltips={desc} onChange={setValue} value={value} />
                                                     {value ? <span className="ant-rate-text">{desc[value - 1]}</span> : ''}
