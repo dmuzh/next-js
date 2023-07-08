@@ -66,6 +66,7 @@
     justify-content: space-evenly;
     color: white;
     font-size: 25px;
+	margin-left: -70px;
 }
 .footerCol .icon a {
 	display: inline-block;
@@ -78,12 +79,10 @@
 	border-radius: 50%;
 	color: #ffffff;
 	transition: all 0.5s ease;
+
 }
 
-.footerCol .icon a:hover {
-	color: #24262b;
-	background-color: #ffffff;
-}
+
 
 /*responsive*/
 @media(max-width: 767px) {

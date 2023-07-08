@@ -26,11 +26,12 @@ const Slide = () => {
               height={300}>
             </Image>
           </SwiperSlide>
-          <SwiperSlide> <Image src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLMqD7GWhsk-xgCJy6OH5kqKIbzbxJqphTZiRUslLDEMjGAwVpGjuEeEolXYM8msOVDo4&usqp=CAU'
-            alt='dsadas'
-            width={1200}
-            height={300}>
-          </Image></SwiperSlide>
+          <SwiperSlide>
+            <Image src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLMqD7GWhsk-xgCJy6OH5kqKIbzbxJqphTZiRUslLDEMjGAwVpGjuEeEolXYM8msOVDo4&usqp=CAU'
+              alt='dsadas'
+              width={1200}
+              height={300}>
+            </Image></SwiperSlide>
           <SwiperSlide>
             <Image src='https://cdn2.cellphones.com.vn/x/https://dashboard.cellphones.com.vn/storage/dung-mac-desk-sis-00222.png'
               alt='dsadas'

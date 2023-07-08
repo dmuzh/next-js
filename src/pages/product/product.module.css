@@ -18,7 +18,6 @@
 .wrapper {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
 	background: #ececec;
 	padding: 10px 30px;
 }

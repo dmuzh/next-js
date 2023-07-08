@@ -15,7 +15,7 @@ function ProductSP({ productSP }) {
   // const [products] = await Promise.all([productsData])
   const [value, setValue] = useState(4);
   return (
-    <>
+    <div  className={style.sp}>
       <div className={style.headline}>
         <h1 className={style.title}>Products</h1>
       </div>
@@ -25,10 +25,13 @@ function ProductSP({ productSP }) {
             {productSP.map((por) => <Link className={style.wrapperA} style={{ flexDirection: 'none' }} key={por._id} href={`/product/${por._id}`}>
 
               <div className={style.product}>
-               
-                <Image  src={por.img} 
-                 width={200}
-                 height={300} ></Image>
+
+                <Image src={por.img}
+                alt='asdasd'
+                  width={200}
+                  height={300} >
+
+                  </Image>
                 <div className="product-info">
                   <h4 className={style.productTitle}>{por.name}</h4>
                   <p className={style.productPrice}>${por.price}</p>
@@ -59,7 +62,7 @@ function ProductSP({ productSP }) {
           <p>Xem Thêm</p>
         </Link>
       </div>
-    </>
+    </div>
   );
 }
 

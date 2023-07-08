@@ -5,14 +5,14 @@ import Image from "next/image";
 import axiosClient from '@/libraries/axiosClient';
 import Navbar from '@/components/Navbar/navbar'
 import Slide from '@/components/Navigation/slide'
-import Categories from '@/components/categories'
+import Categories from '@/pages/categories'
 import Information from '@/components/Information/Information'
 import Footer from '@/components/Footer/footer'
 import Hotsale from '@/components/hotSale'
 import ProductSP from '@/components/productSP';
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Main({  productsSale,productSP,categories}) {
+export default function Home({ productsSale, productSP, categories }) {
   return (
     <>
       <Head>
@@ -21,25 +21,28 @@ export default function Main({  productsSale,productSP,categories}) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} `}>
-        <Navbar />
-        <Slide />
-        <div className='Banners'>
-        <Image src='https://cdn2.cellphones.com.vn/1200x75,webp,q100/https://dashboard.cellphones.com.vn/storage/b2s-special-desktop-dday-p1.png
+      <div>
+        <div className={`${styles.main} `}>
+          <Navbar />
+          <Slide />
+          <div className={styles.Banners}>
+            <Image src='https://cdn2.cellphones.com.vn/1200x75,webp,q100/https://dashboard.cellphones.com.vn/storage/b2s-special-desktop-dday-p1.png
         'alt='ádasdas'
-        width={1200}
-        height={100}
-        ></Image>
+              width={1200}
+              height={100}
+            ></Image>
+          </div>
+          <Categories categories={categories} />
+          <Hotsale productsSale={productsSale} />
+          <ProductSP productSP={productSP} />
+          <hr/>
+          <Information />
+
+          <Footer />
+
+
         </div>
-        <Categories categories={categories}/>
-        <Hotsale productsSale={productsSale}/>
-        <ProductSP productSP={productSP} />
-
-         <Information />
-
-        <Footer /> 
-
-      </main>
+      </div>
     </>
   )
 }
@@ -49,7 +52,7 @@ export async function getServerSideProps() {
     const response = await axiosClient.get('/user/products');
     const responseSale = await axiosClient.get('questions/hotSale');
     const responseSP = await axiosClient.get('questions/spRandom');
-  
+
     const filter = await axiosClient.get('user/categories');
 
 
@@ -57,9 +60,9 @@ export async function getServerSideProps() {
     return {
       props: {
         products: response.data.payload,
-        productsSale:responseSale.data.payload,
-        productSP:responseSP.data.payload,
-        categories:filter.data.payload
+        productsSale: responseSale.data.payload,
+        productSP: responseSP.data.payload,
+        categories: filter.data.payload
 
       },
 
