@@ -25,17 +25,11 @@ export default function Home({ productsSale, productSP, categories }) {
         <div className={`${styles.main} `}>
           <Navbar />
           <Slide />
-          <div className={styles.Banners}>
-            <Image src='https://cdn2.cellphones.com.vn/1200x75,webp,q100/https://dashboard.cellphones.com.vn/storage/b2s-special-desktop-dday-p1.png
-        'alt='ádasdas'
-              width={1200}
-              height={100}
-            ></Image>
-          </div>
+          
           <Categories categories={categories} />
           <Hotsale productsSale={productsSale} />
           <ProductSP productSP={productSP} />
-          <hr/>
+          <hr />
           <Information />
 
           <Footer />

@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 6rem 25rem;
+    padding: 6rem 15rem;
    
 }
 
@@ -24,3 +24,8 @@
 
 
 }
+.Banners{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

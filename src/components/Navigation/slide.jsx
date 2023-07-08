@@ -11,10 +11,17 @@ const Slide = () => {
     <div>
       <div className={style.slide}>
         <Swiper navigation={true} modules={[Navigation]} >
+          <SwiperSlide>
+            <Image src='https://cdn2.cellphones.com.vn/x/https://dashboard.cellphones.com.vn/storage/dung-mac-desk-sis-00222.png'
+              alt='dsadas'
+              width={900}
+              height={300}>
+            </Image>
+          </SwiperSlide>
           <SwiperSlide className={style.mySwiper}>
             <Image src='https://cdn2.cellphones.com.vn/690x300,webp,q100/https://dashboard.cellphones.com.vn/storage/sliding-ip14-pro-max-th66.png'
               alt="picture"
-              width={1200}
+              width={900}
               height={300} >
 
             </Image>
@@ -22,23 +29,17 @@ const Slide = () => {
           <SwiperSlide>
             <Image src='https://cdn2.cellphones.com.vn/690x300,webp,q100/https://dashboard.cellphones.com.vn/storage/banner-sliding-apple-112.png'
               alt='dsadas'
-              width={1200}
+              width={900}
               height={300}>
             </Image>
           </SwiperSlide>
           <SwiperSlide>
             <Image src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLMqD7GWhsk-xgCJy6OH5kqKIbzbxJqphTZiRUslLDEMjGAwVpGjuEeEolXYM8msOVDo4&usqp=CAU'
               alt='dsadas'
-              width={1200}
+              width={900}
               height={300}>
             </Image></SwiperSlide>
-          <SwiperSlide>
-            <Image src='https://cdn2.cellphones.com.vn/x/https://dashboard.cellphones.com.vn/storage/dung-mac-desk-sis-00222.png'
-              alt='dsadas'
-              width={1200}
-              height={300}>
-            </Image>
-          </SwiperSlide>
+
         </Swiper>
 
         <div className={style.img}>
@@ -53,6 +54,13 @@ const Slide = () => {
             height={150}>
           </Image>
         </div>
+      </div>
+      <div className={style.Banners}>
+        <Image src='https://images.fpt.shop/unsafe/fit-in/1200x100/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/7/4/638240666352557412_H7_1200x100.png
+        'alt='ádasdas'
+          width={1200}
+          height={100}
+        ></Image>
       </div>
 
 
