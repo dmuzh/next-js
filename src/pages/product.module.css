@@ -1,65 +1,44 @@
-.wrapper {
-	background: linear-gradient(rgb(247,247,250), rgba(249, 249, 249, 0.898)) 0% 0% / cover;
-	text-align: center;
-	margin-top: 35px;
+.sp {
+	margin: 40px auto;
+	padding: 0 20px;
+
 }
 
-.wrapperB>.wrapperA {
-	text-decoration: none;
-	width: 240px;
-
+.headline {
+	margin-bottom: 20px;
+	text-align: center;
 }
 
 .title {
-	align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 10px 8px 0;
-    width: 100%;
-
+	font-size: 36px;
+	font-weight: bold;
+	color: #333;
 }
 
-.title>img {
-
-	height: auto;
-    max-width: 100%;
-	line-height: 30px;
-	padding: 10px 16px;
-	text-transform: uppercase;
-	display: inline-block;
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	grid-gap: 20px;
+	justify-items: center;
 }
-
-.title>a {
-	margin: 10px 10px;
+.wrapper>a{
 	text-decoration: none !important;
-	color: #ee4d2d;
-	display: flex;
-
-}
-
-.allProducts {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
 }
 
 .product {
 	overflow: hidden;
-	background: white;
 	color: #21201e;
 	text-align: center;
 	width: 240px;
-
+	background-color: transparent;
 	padding: 2rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	border-radius: 1.2rem;
 	margin: 2rem;
+	box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .1), 0 2px 6px 2px rgba(60, 64, 67, .15);
+	border-radius: 15px;
 }
-
 .saleOff {
 	position: absolute;
 	margin-left: 200px;
@@ -99,7 +78,6 @@
 	color:rgb(112,112,112);
 	padding: 10px;
 }
-
 .product .productTitle,
 .product .productPrice {
 	font-size: 18px;
@@ -134,4 +112,44 @@
 
 .product a:hover {
 	transform: scale(1.1);
+}
+
+.button {
+	/* màu của Quản trị mạng ^^ */
+	border: none;
+	color: white;
+	padding: 10px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 18px;
+	background-color: #ea0b0b;
+	border-radius: 10px;
+	margin-top: 10px;
+}
+
+.moreButton {
+	width: 100%;
+	height: 70px;
+	margin-top: 1.25rem;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	padding: 15px 0;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .03);
+
+}
+
+
+.more {
+	width: 30%;
+	font-size: 18px;
+	background-color: #b63535;
+	border-radius: 5px;
+	color: black;
+}
+
+.more>p {
+	text-decoration: none;
+	margin-top: 10px;
 }

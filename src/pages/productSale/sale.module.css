@@ -78,6 +78,10 @@
 .productPrice{
 	color: #ee4d2d;
 }
+.productPrice>del {
+	color:rgb(112,112,112);
+	padding: 10px;
+}
 .product .productTitle,
 .product .productPrice {
 	font-size: 18px;

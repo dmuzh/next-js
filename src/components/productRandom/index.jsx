@@ -4,34 +4,21 @@ import { Rate } from 'antd';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from 'swiper/modules';
-// import Swiper bundle with all modules installed
-
-// import Swiper bundle with all modules installed
-
-// import styles bundle
-import 'swiper/css/bundle';
-
-// init Swiper:
-// const swiper = new Swiper();
-
 import style from './hotSale.module.css'
 import Link from 'next/link';
 import { RightOutlined } from '@ant-design/icons'
 import axiosClient from '@/libraries/axiosClient';
 
+import { Pagination } from 'swiper/modules';
+
 const desc = [];
-function Hotsale({ productsSale }) {
+function ProductRandom({ random }) {
     const [value, setValue] = useState(5);
     return (
         <div className={style.wrapper}>
             <div className={style.title}>
+                <h1 > Sản Phẩm Bán Chạy</h1>
 
-                <img src="https://cdn2.cellphones.com.vn/x/media/tmp/catalog/product/h/o/home-page_1_1_.png" alt="" />
-                <Link href={'/productSale'}>
-                    <div>Xem Thêm</div>
-                    <RightOutlined />
-                </Link>
             </div>
             <Swiper
                 slidesPerView={4}
@@ -45,7 +32,7 @@ function Hotsale({ productsSale }) {
             >
                 {
                     <div >
-                        {productsSale.map((product) => (
+                        {random.map((product) => (
                             <SwiperSlide key={product._id} className={style.wrapperB}>
                                 <Link className={style.wrapperA} style={{ height: '20px' }} href={`/product/${product._id}`}>
                                     <div className={style.allProducts}>
@@ -56,8 +43,8 @@ function Hotsale({ productsSale }) {
                                             <img src={product.img} />
                                             <div className="product-info">
                                                 <h4 className={style.productTitle}>{product.name}</h4>
-                                                <p className={style.productPrice}>${product.discountedPrice} 
-                                                <del>${product.price}</del></p>
+                                                <p className={style.productPrice}>${product.price} 
+                                                        </p>
                                                 <span>
                                                     <Rate tooltips={desc} onChange={setValue} value={value} />
                                                     {value ? <span className="ant-rate-text">{desc[value - 1]}</span> : ''}
@@ -74,20 +61,21 @@ function Hotsale({ productsSale }) {
                 }
 
             </Swiper >
+        
         </div>
     );
 }
 
-export default Hotsale;
+export default ProductRandom;
 
 // getServerSideProps - Server-Side Rendering
 export async function getServerSideProps() {
     try {
-        const responseSale = await axiosClient.get('questions/hotSale');
+        const responseRandom = await axiosClient.get('questions/productRandom');
 
         return {
             props: {
-                productsSale: responseSale.data.payload
+                random: responseRandom.data.payload
             },
 
             // revalidate: 24 * 60 * 60,

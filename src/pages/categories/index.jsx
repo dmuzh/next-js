@@ -9,7 +9,7 @@ const Categories = ({ categories }) => {
             {
                 categories.length > 0 ? (
                     <div className={style.collections}>
-                        {categories.map((cat) => <Link key={cat._id} href={`/`}>
+                        {categories.map((cat) => <Link key={cat._id} href={`/product`}>
                             <section id="collection">
                                 <div>
                                     <div className={style.content}>
